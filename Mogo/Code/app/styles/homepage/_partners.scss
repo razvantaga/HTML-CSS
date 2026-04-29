@@ -1,0 +1,21 @@
+.partners {
+  background-color: #f8f8f8;
+
+  .inner {
+    background-image: url("../images/partners.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    padding-top: 40px;
+
+    @media (min-width: $md) {
+      background-size: cover;
+      padding-top: 80px;
+    }
+
+    @media (min-width: $xl) {
+      padding-top: 130px;
+    }
+  }
+}

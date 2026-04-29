@@ -1,0 +1,63 @@
+.services {
+  .inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+    padding-top: 50px;
+
+    @media (min-width: $xl) {
+      padding-top: 50px 0;
+    }
+
+    &::after {
+      @media (min-width: $xl) {
+        content: "";
+        position: absolute;
+        left: -30px;
+        bottom: 125px;
+        height: 1px;
+        width: 100%;
+        background-color: #999999;
+      }
+    }
+
+    @media (min-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 50px;
+    }
+
+    @media (min-width: $xl) {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 100px;
+    }
+
+    .item {
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      h4 {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #333333;
+        font-weight: 400;
+        font-family: "Montserrat";
+        padding-left: 50px;
+      }
+
+      p {
+        text-align: start;
+        padding-left: 50px;
+
+        @media (min-width: $xl) {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+}

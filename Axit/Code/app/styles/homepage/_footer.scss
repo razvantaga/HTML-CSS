@@ -1,0 +1,59 @@
+footer {
+  background-color: #000000;
+  padding: 20px 0;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding-left: 30px;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 25px;
+
+        &.facebook:hover {
+          color: #1877f2;
+        }
+
+        &.twitter:hover {
+          color: #1da1f2;
+        }
+
+        &.google:hover {
+          color: #db4a39;
+        }
+
+        &.pinterest:hover {
+          color: #e60023;
+        }
+
+        &.instagram:hover {
+          color: #8a3ab9;
+        }
+
+        &.rss:hover {
+          color: #ee802f;
+        }
+      }
+    }
+  }
+
+  p {
+    opacity: 0.502;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Open Sans";
+  }
+}

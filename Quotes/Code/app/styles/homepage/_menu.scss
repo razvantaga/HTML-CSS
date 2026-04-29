@@ -1,0 +1,165 @@
+.header {
+  padding: 40px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+
+  @media (min-width: $lg) {
+    padding: 60px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #000;
+      font-weight: 700;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+      padding: 10px;
+
+      @media (min-width: $md) {
+        font-size: 25px;
+        padding: 15px;
+      }
+
+      @media (min-width: $xl) {
+        font-size: 30px;
+        padding: 20px;
+      }
+    }
+  }
+
+  &__menu {
+    align-self: center;
+    a {
+      text-decoration: none;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 700;
+      font-family: "Montserrat";
+      text-align: center;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        left: 0;
+      }
+
+      &::before {
+        top: -5px;
+      }
+
+      &::after {
+        bottom: -5px;
+      }
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    opacity: 0.9;
+
+    ul {
+      margin: 0;
+      width: 100%;
+      padding: 180px 50px;
+      list-style: none;
+      position: relative;
+      top: 50%;
+
+      li {
+        padding-bottom: 20px;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+
+        a {
+          font-size: 25px;
+          line-height: 1;
+          letter-spacing: 5px;
+          text-transform: uppercase;
+          color: #626262;
+          font-weight: 700;
+          font-family: "Montserrat";
+
+          @media (min-width: $md) {
+            font-size: 40px;
+          }
+
+          @media (min-width: $xl) {
+            font-size: 50px;
+            line-height: 80px;
+            letter-spacing: 10px;
+          }
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    .close-menu {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 700;
+      font-family: "Montserrat";
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+
+      @media (min-width: $xl) {
+        top: 50px;
+        right: 150px;
+      }
+
+      i {
+        font-size: 30px;
+
+        @media (min-width: $md) {
+          font-size: 50px;
+        }
+
+        @media (min-width: $xl) {
+          font-size: 70px;
+        }
+      }
+    }
+  }
+}

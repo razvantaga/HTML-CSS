@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+  @import "menu";
+  @import "intro";
+  @import "about";
+  @import "testimonials";
+  @import "reasons";
+  @import "cta";
+  @import "posters";
+  @import "footer";
+
+  .content {
+    max-width: 1330px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}

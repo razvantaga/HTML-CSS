@@ -1,0 +1,65 @@
+.intro {
+  background-image: url("../images/intro-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 100px 0;
+
+  @media (min-width: $md) {
+    padding: 200px 0;
+  }
+
+  @media (min-width: $xl) {
+    padding: 400px 0;
+  }
+
+  .content {
+    text-align: end;
+
+    .inner {
+      padding: 10px 0;
+
+      h1 {
+        margin: 0;
+        font-size: 70px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: 100;
+        font-family: "Raleway";
+        text-align: end;
+        line-height: 1;
+
+        @media (min-width: $md) {
+          font-size: 130px;
+        }
+
+        @media (min-width: $xl) {
+          font-size: 220px;
+          letter-spacing: 22px;
+          transform: translateX(20px);
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: 16px;
+        letter-spacing: 6px;
+        color: #ffffff;
+        font-weight: 700;
+        font-family: "Raleway";
+        text-align: end;
+        line-height: 1;
+
+        @media (min-width: $md) {
+          font-size: 34px;
+        }
+
+        @media (min-width: $xl) {
+          font-size: 64px;
+        }
+      }
+    }
+  }
+}

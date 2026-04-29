@@ -1,0 +1,264 @@
+.company {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  @media (min-width: $lg) {
+    flex-direction: row;
+  }
+
+  &__content-left {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @media (min-width: $lg) {
+      width: 50%;
+    }
+
+    img {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__content-right {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    padding: 50px 0 220px 0;
+
+    @media (min-width: $lg) {
+      padding: 100px 0 100px 0;
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      position: relative;
+      z-index: 2;
+
+      @media (min-width: $md) {
+        width: 100%;
+        padding-bottom: 30%;
+      }
+
+      @media (min-width: $lg) {
+        padding-bottom: 0;
+      }
+
+      &--tabs {
+        width: 100%;
+        z-index: 1;
+
+        @media (min-width: $md) {
+          width: 75%;
+          margin: 0 auto;
+        }
+
+        @media (min-width: $lg) {
+          width: 50%;
+          margin: 0;
+        }
+
+        @media (min-width: $xl) {
+          width: 45%;
+        }
+
+        h2 {
+          font-size: 23px;
+          line-height: 40px;
+          color: #ffffff;
+          font-weight: 400;
+          font-family: "Montserrat";
+          text-align: center;
+          position: relative;
+
+          @media (min-width: $md) {
+            font-size: 30px;
+          }
+
+          @media (min-width: $lg) {
+            font-size: 36px;
+          }
+
+          @media (min-width: $xl) {
+            text-align: start;
+          }
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 75px;
+            height: 2px;
+            background-color: #18cfab;
+            bottom: -37px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media (min-width: $xl) {
+              left: 40%;
+            }
+          }
+
+          &::after {
+            bottom: -42px;
+            transform: translateX(-38%);
+          }
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          padding-top: 60px;
+          align-self: center;
+          justify-content: center;
+
+          @media (min-width: $md) {
+            padding-top: 100px;
+            padding-bottom: 35px;
+          }
+
+          @media (min-width: $lg) {
+            justify-content: flex-start;
+          }
+
+          @media (min-width: 1800px) {
+            align-self: flex-start;
+          }
+
+          li {
+            padding-left: 10px;
+
+            @media (min-width: $md) {
+              padding-left: 20px;
+            }
+
+            &:first-of-type {
+              padding-left: 0;
+            }
+
+            button {
+              margin: 0;
+              padding: 0;
+              font-size: 12px;
+              line-height: 42px;
+              text-transform: uppercase;
+              color: #f5f5f5;
+              font-weight: 700;
+              font-family: "Montserrat";
+              border: none;
+              background: transparent;
+              position: relative;
+
+              @media (min-width: $md) {
+                font-size: 16px;
+              }
+
+              &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                bottom: 35px;
+                left: 0;
+                background: transparent;
+                height: 3px;
+              }
+
+              &:hover,
+              &.active {
+                color: #18cfab;
+
+                &::after {
+                  background-color: #18cfab;
+                }
+              }
+            }
+          }
+        }
+
+        .progress {
+          margin-top: 10px;
+          width: 100%;
+          height: 40px;
+          background: transparent;
+          border: 1px solid #94989b;
+          z-index: 3;
+          align-self: center;
+
+          @media (min-width: 1800px) {
+            align-self: flex-start;
+          }
+
+          &__bar {
+            &--first {
+              background-color: #9b5ea4;
+            }
+
+            &--second {
+              background-color: #12b0df;
+            }
+
+            &--third {
+              background-color: #d77f7e;
+            }
+
+            &--four {
+              background-color: #21bc9d;
+            }
+
+            &--five {
+              background-color: #bc8936;
+            }
+          }
+
+          &__paragraph {
+            padding: 0;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 700;
+            font-family: "Montserrat";
+            text-align: left;
+            padding-left: 20px;
+            padding-top: 20px;
+          }
+        }
+
+        .right {
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

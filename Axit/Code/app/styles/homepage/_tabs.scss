@@ -1,0 +1,172 @@
+.tabs {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+
+  @media (min-width: $md) {
+    padding: 120px 0;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    @media (min-width: $md) {
+      grid-template-columns: 0.5fr 2fr 1.5fr;
+      gap: 60px;
+    }
+
+    .tab-list {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        padding-bottom: 30px;
+
+        @media (min-width: $md) {
+          gap: 0;
+          padding-bottom: 0;
+          flex-direction: column;
+        }
+
+        li {
+          button {
+            border: none;
+            background-color: #333333;
+            font-size: 15px;
+            line-height: 20px;
+            color: #ffffff;
+            font-weight: 700;
+            font-family: "Open Sans";
+            padding: 25px 20px;
+            transition: all 0.3s ease-in-out;
+
+            @media (min-width: $md) {
+              padding: 25px;
+            }
+
+            @media (min-width: $xl) {
+              padding: 45px 35px;
+            }
+
+            &:hover,
+            &.active {
+              background-color: #ff8b38;
+            }
+          }
+
+          &:nth-of-type(2) {
+            button {
+              border-top: 1px solid #fff;
+              border-bottom: 1px solid #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      text-align: center;
+
+      @media (min-width: $md) {
+        text-align: start;
+      }
+
+      @media (min-width: $xl) {
+        padding: 0 20px;
+      }
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 17px;
+        color: #333333;
+        font-weight: 700;
+        font-family: "Open Sans";
+        padding-bottom: 20px;
+
+        @media (min-width: $md) {
+          font-size: 20px;
+          padding-bottom: 50px;
+        }
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #86878b;
+        font-weight: 400;
+        font-family: "Open Sans";
+
+        &:first-of-type {
+          padding-bottom: 20px;
+        }
+
+        &:nth-of-type(2) {
+          padding-bottom: 40px;
+
+          @media (min-width: $md) {
+            padding-bottom: 60px;
+          }
+        }
+      }
+
+      a {
+        text-decoration: none;
+        border: none;
+        background-color: #333333;
+        font-size: 15px;
+        line-height: 20px;
+        color: #ffffff;
+        font-weight: 700;
+        font-family: "Open Sans";
+        padding: 15px 20px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: #ff8b38;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      padding-top: 50px;
+
+      @media (min-width: $md) {
+        padding-top: 0;
+      }
+
+      &__image {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 80%;
+        height: 100%;
+        padding-top: 60%;
+        margin: 0 auto;
+
+        @media (min-width: $md) {
+          padding-top: 0;
+          width: 80%;
+          height: 35%;
+          margin: 0;
+        }
+
+        @media (min-width: $xl) {
+          padding-top: 0;
+          width: 80%;
+          height: 75%;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

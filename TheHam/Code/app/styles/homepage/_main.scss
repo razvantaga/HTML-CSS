@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+  @import "menu";
+  @import "intro";
+  @import "4col";
+  @import "services";
+  @import "about";
+  @import "work";
+  @import "tabs";
+  @import "cta";
+  @import "news";
+  @import "4col2";
+  @import "pricing";
+  @import "testimonials";
+  @import "team";
+  @import "purchase";
+  @import "contact";
+  @import "footer";
+
+  .content {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    .heading {
+      font-size: 28px;
+      line-height: 1;
+      color: #4e4e4e;
+      font-weight: 400;
+      font-family: "Montserrat";
+      text-align: center;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 2px;
+      }
+
+      &::after {
+        bottom: -30px;
+        background-color: #18cfab;
+      }
+
+      &::before {
+        bottom: -35px;
+        transform: translateX(-25%);
+        background-color: #18cfab;
+      }
+
+      @media (min-width: $md) {
+        font-size: 32px;
+      }
+
+      @media (min-width: $xl) {
+        line-height: 40px;
+        font-size: 36px;
+      }
+    }
+  }
+}

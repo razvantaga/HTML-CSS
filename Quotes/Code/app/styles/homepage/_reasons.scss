@@ -1,0 +1,137 @@
+.reasons {
+  padding: 50px 0;
+
+  @media (min-width: $md) {
+    padding: 100px 0;
+  }
+
+  .content {
+    .heading {
+      padding-bottom: 100px;
+
+      h2 {
+        font-size: 30px;
+        line-height: 1;
+        color: #000000;
+        font-weight: 700;
+        font-family: "Raleway";
+        position: relative;
+
+        @media (min-width: $md) {
+          font-size: 50px;
+        }
+
+        @media (min-width: $xl) {
+          font-size: 60px;
+          line-height: 48px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 90px;
+          height: 2px;
+          background-color: #000000;
+          left: 0;
+          bottom: -20px;
+
+          @media (min-width: $md) {
+            bottom: -30px;
+          }
+
+          @media (min-width: $xl) {
+            bottom: -50px;
+          }
+        }
+      }
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+
+      @media (min-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .item {
+        width: 100%;
+        border: 2px solid #eae9e7;
+        padding: 20px;
+
+        @media (min-width: $md) {
+          padding: 30px;
+        }
+
+        @media (min-width: $xl) {
+          padding: 50px;
+        }
+
+        &:nth-child(even) {
+          border-left: none;
+        }
+
+        &:nth-child(n + 3) {
+          border-top: none;
+        }
+
+        h3 {
+          margin: 0;
+          padding: 0;
+          font-size: 26px;
+          line-height: 1;
+          text-transform: uppercase;
+          color: #000000;
+          font-weight: 700;
+          font-family: "Raleway";
+          padding-bottom: 30px;
+
+          @media (min-width: $md) {
+            font-size: 28px;
+          }
+
+          @media (min-width: $xl) {
+            font-size: 30px;
+            line-height: 48px;
+          }
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+          font-size: 20px;
+          color: #000000;
+          font-weight: 400;
+          font-family: "Raleway";
+          padding-bottom: 50px;
+        }
+
+        span {
+          font-size: 20px;
+          font-family: "Raleway";
+          font-weight: 300;
+          font-style: italic;
+        }
+      }
+    }
+
+    .more {
+      text-align: center;
+      padding-top: 70px;
+
+      a {
+        font-size: 20px;
+        letter-spacing: 3px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #000000;
+        font-weight: 700;
+        font-family: "Montserrat";
+        text-align: center;
+        border: 3px solid #000000;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

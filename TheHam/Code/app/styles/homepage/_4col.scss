@@ -1,0 +1,81 @@
+.options {
+  .inner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    @media (min-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .item {
+      text-align: center;
+      padding: 50px 0;
+
+      @media (min-width: $md) {
+        padding: 100px 0;
+      }
+
+      h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 36px;
+        line-height: 42px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 400;
+        font-family: "Montserrat";
+        padding-top: 20px;
+      }
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #18cfab;
+        font-weight: 700;
+        font-family: "Montserrat";
+        padding-top: 50px;
+
+        @media (min-width: $md) {
+          font-size: 20px;
+        }
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 42px;
+        color: #18cfab;
+        font-weight: 300;
+        font-family: "Montserrat";
+      }
+
+      &:nth-child(odd) {
+        background-color: #1c2a33;
+        border-top: 5px solid #18cfab;
+      }
+
+      &:nth-child(even) {
+        background-color: #18cfab;
+        border-top: 5px solid #fff;
+
+        h3 {
+          color: #fff;
+        }
+
+        p {
+          color: #1c2a33;
+        }
+      }
+    }
+  }
+}

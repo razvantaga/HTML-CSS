@@ -1,0 +1,111 @@
+.portfolio {
+  background-color: #ffdd99;
+
+  .content {
+    &__content-heading {
+      h2 {
+        color: #393939;
+
+        &::after {
+          background-color: #e5c37f;
+        }
+      }
+
+      p {
+        color: #393939;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+
+        li {
+          padding-left: 10px;
+
+          &:first-of-type {
+            padding-left: 0;
+          }
+
+          a {
+            font-size: 18px;
+            letter-spacing: 0px;
+            line-height: 20px;
+            color: #393939;
+            font-weight: 400;
+            font-family: "Titillium Web";
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 5px 20px;
+            background-color: #ebc985;
+            border-radius: 6px;
+          }
+
+          &:first-of-type {
+            a {
+              background-color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+
+    &__content-body {
+      display: grid !important;
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 60px;
+
+      @media (min-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &--item {
+        img {
+          width: 450px;
+          height: auto;
+          margin: 0;
+
+          @media (min-width: $xl) {
+            margin: 0 12%;
+          }
+        }
+
+        p {
+          font-size: 18px;
+          color: #393939;
+          text-transform: uppercase;
+          font-weight: 400;
+          padding-top: 15px;
+        }
+      }
+
+      a {
+        margin: 0 auto;
+        margin-top: 40px;
+        font-size: 18px;
+        line-height: 26px;
+        color: #ffffff;
+        font-weight: 600;
+        font-family: "Titillium Web", sans-serif;
+        background-color: #17c2a4;
+        text-transform: uppercase;
+        padding: 15px 50px;
+        border: none;
+        border-radius: 5px;
+        border-bottom: 5px solid #14a58b;
+        text-decoration: none;
+
+        @media (min-width: $md) {
+          transform: translateX(60%);
+        }
+
+        @media (min-width: $xl) {
+          transform: translateX(100%);
+        }
+      }
+    }
+  }
+}

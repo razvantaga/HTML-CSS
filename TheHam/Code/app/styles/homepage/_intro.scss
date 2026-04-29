@@ -1,0 +1,183 @@
+.intro {
+  .swiper-slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(66, 83, 80, 0.6); /* culoare + opacitate */
+    }
+
+    .content {
+      position: relative;
+      z-index: 4;
+      .inner {
+        text-align: center;
+        margin: 0 auto;
+
+        h3 {
+          font-size: 20px;
+          line-height: 1;
+          text-transform: uppercase;
+          color: #ffffff;
+          font-weight: 700;
+          font-family: "Montserrat";
+          text-align: center;
+
+          @media (min-width: $md) {
+            font-size: 30px;
+          }
+
+          @media (min-width: $xl) {
+            line-height: 10px;
+            font-size: 35px;
+            padding-top: 100px;
+          }
+
+          span {
+            color: #18cfab;
+          }
+        }
+
+        h1 {
+          font-size: 33px;
+          line-height: 1;
+          text-transform: uppercase;
+          color: #ffffff;
+          font-weight: 700;
+          font-family: "Montserrat";
+          text-align: center;
+          padding: 10px 0;
+
+          @media (min-width: $md) {
+            font-size: 65px;
+          }
+
+          @media (min-width: $xl) {
+            font-size: 79px;
+            line-height: 84px;
+            padding-top: 40px;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1;
+          color: #d4d4d4;
+          font-weight: 300;
+          font-family: "Montserrat";
+          text-align: center;
+          padding-bottom: 50px;
+
+          @media (min-width: $md) {
+            font-size: 29px;
+          }
+
+          @media (min-width: $xl) {
+            font-size: 34px;
+            line-height: 84px;
+            padding-bottom: 100px;
+          }
+        }
+
+        > div {
+          padding-bottom: 100px;
+
+          a {
+            font-size: 13px;
+            line-height: 32px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-weight: 700;
+            font-family: "Montserrat";
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            border-top: 5px solid #fff;
+            margin: 0 10px;
+            display: inline-block;
+            text-decoration: none;
+
+            @media (min-width: $xl) {
+              padding: 10px 20px;
+            }
+
+            &:first-child {
+              background-color: #18cfab;
+            }
+
+            &:nth-child(2) {
+              background-color: #00cbf6;
+            }
+          }
+        }
+      }
+
+      .bg-images {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 40%;
+        padding-top: 100px;
+        position: absolute;
+        bottom: -15px;
+        right: 50%;
+        transform: translateX(50%);
+
+        @media (min-width: $md) {
+          width: 20%;
+        }
+
+        @media (min-width: $xl) {
+          width: 12%;
+          right: -17px;
+          bottom: 50px;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  .swiper-navigation {
+    display: flex;
+    position: absolute;
+    right: 100px;
+    bottom: 20px;
+    z-index: 1000;
+
+    @media (min-width: $md) {
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    @media (min-width: $xl) {
+      right: 24%;
+      bottom: 75px;
+    }
+  }
+
+  .custom-prev,
+  .custom-next {
+    cursor: pointer;
+    font-size: 20px;
+    color: #878787;
+    background-color: #3c4140;
+    padding: 10px 20px;
+    transition: color 0.3s;
+    margin: 0 20px;
+
+    &:hover {
+      color: #fff;
+      background-color: #18cfab;
+    }
+  }
+}

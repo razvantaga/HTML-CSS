@@ -1,0 +1,44 @@
+.cta {
+  background-image: url("../images/cta-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 100px 0;
+  background-attachment: fixed;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Raleway";
+    text-align: center;
+    margin: 0 auto;
+
+    @media (min-width: $md) {
+      font-size: 35px;
+    }
+
+    @media (min-width: $xl) {
+      padding-bottom: 50px;
+      font-size: 60px;
+      width: 850px;
+    }
+  }
+
+  p,
+  a {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Relaway";
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

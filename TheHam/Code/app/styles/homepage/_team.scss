@@ -1,0 +1,127 @@
+.team {
+  padding: 50px 0;
+
+  @media (min-width: $lg) {
+    padding: 100px 0;
+  }
+
+  .wrapper {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 50px;
+    gap: 20px;
+
+    @media (min-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden; // important pt. overlay
+      transition: ease-in-out all 0.3s;
+
+      /* 🔹 Overlay de background pentru fiecare imagine */
+      .bg-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #18cfab; // 🔹 culoare de overlay (poți schimba)
+          opacity: 0.3; // invizibil la început
+          transition: opacity 0.3s ease-in-out;
+        }
+      }
+
+      &:hover {
+        figcaption {
+          background-color: #18cfab;
+
+          p {
+            color: #2e4a5b;
+          }
+
+          img {
+            display: block;
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            z-index: 2;
+          }
+        }
+      }
+
+      figcaption {
+        background-color: #2e4a5b;
+        position: relative;
+        z-index: 1;
+
+        h3 {
+          margin: 0;
+          padding: 0 20px;
+          font-size: 16px;
+          line-height: 39px;
+          color: #ffffff;
+          font-weight: 700;
+          font-family: "Montserrat";
+        }
+
+        p {
+          margin: 0;
+          padding: 0 20px;
+          font-size: 13px;
+          line-height: 39px;
+          color: #18cfab;
+          font-weight: 300;
+          font-family: "Montserrat";
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          list-style: none;
+          display: flex;
+          border-top: 3px solid #fff;
+
+          li {
+            width: 25%;
+            border-left: 3px solid #fff;
+            text-align: center;
+            padding: 20px 0;
+
+            &:first-of-type {
+              border-right: 3px solid #fff;
+            }
+
+            a {
+              color: #fff;
+              font-size: 20px;
+            }
+          }
+        }
+
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}

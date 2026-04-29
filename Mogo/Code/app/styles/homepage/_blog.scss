@@ -1,0 +1,125 @@
+.blog {
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width: $xl) {
+      flex-direction: row;
+    }
+
+    &__item {
+      position: relative;
+      padding-bottom: 50px;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+
+      @media (min-width: $md) {
+        width: 50%;
+      }
+
+      @media (min-width: $xl) {
+        text-align: start;
+        padding: 0 20px;
+        width: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+
+      @media (min-width: $md) {
+        width: auto;
+      }
+    }
+
+    span {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      bottom: 55%;
+      background-color: #95e1d3;
+      color: #fff;
+      font-style: italic;
+      padding: 10px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      text-align: center;
+
+      @media (min-width: $md) {
+        bottom: 50%;
+        left: -5%;
+      }
+
+      @media (min-width: $xl) {
+        left: 0;
+        bottom: 41%;
+      }
+
+      small {
+        padding: 0;
+        margin: 0;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: 700;
+        font-family: "Montserrat";
+        text-align: center;
+        font-style: normal;
+        max-height: 35px;
+      }
+    }
+
+    h4 {
+      padding-top: 20px;
+      padding-bottom: 5px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #333333;
+      font-weight: 400;
+      font-family: "Montserrat";
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      text-align: start;
+      font-size: 15px;
+      line-height: 24px;
+      color: #999999;
+      font-weight: 400;
+      font-family: "Roboto";
+      width: 100%;
+      padding-bottom: 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      width: 100%;
+      border-top: 1px solid #999999;
+      padding-top: 10px;
+
+      li {
+        padding-right: 5px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #999999;
+        font-weight: 300;
+        font-style: italic;
+        font-family: "Roboto";
+
+        &:nth-of-type(2) {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}

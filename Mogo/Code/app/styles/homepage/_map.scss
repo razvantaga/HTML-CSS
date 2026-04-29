@@ -1,0 +1,49 @@
+.map {
+  background-image: url("../images/map-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 0;
+
+  @media (min-width: $xl) {
+    padding-top: 20px;
+  }
+
+  .content {
+    padding: 0;
+    padding-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+
+    @media (min-width: $md) {
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $xl) {
+      padding-top: 30px;
+    }
+
+    h2 {
+      color: #f38181;
+      padding-top: 5px;
+
+      @media (min-width: $md) {
+        padding-top: 20px;
+      }
+
+      &::after {
+        bottom: 10px;
+
+        @media (min-width: $md) {
+          bottom: 20px;
+        }
+
+        @media (min-width: $xl) {
+          bottom: 55px;
+        }
+      }
+    }
+  }
+}

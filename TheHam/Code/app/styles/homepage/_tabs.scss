@@ -1,0 +1,134 @@
+.tabs {
+  padding: 50px 0;
+
+  @media (min-width: $lg) {
+    padding: 100px 0;
+  }
+
+  .content {
+    .wrapper {
+      padding-top: 50px;
+
+      @media (min-width: $md) {
+        padding-top: 100px;
+      }
+
+      nav {
+        padding-bottom: 30px;
+        overflow-x: auto;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+
+        /* Ascunde scrollbar-ul vizual */
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .nav-tabs {
+          display: inline-flex;
+          flex-wrap: nowrap;
+
+          button {
+            flex: 0 0 auto;
+            white-space: nowrap;
+            font-size: 16px;
+            line-height: 39px;
+            color: #717171;
+            background-color: #f8fcfe;
+            font-weight: 400;
+            font-family: "Montserrat";
+            text-align: center;
+            width: 200px;
+            border: 1px solid #eff0f1;
+            font-weight: 600;
+            border-radius: 0%;
+
+            &.active {
+              background-color: #18cfab;
+              color: #fff;
+              border: 1px solid #18cfab;
+              position: relative;
+
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: -18px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 20px solid #18cfab;
+              }
+            }
+          }
+        }
+      }
+
+      /* Containerul de tab-uri */
+      .tab-content {
+        position: relative;
+        min-height: 170px; /* pentru a nu se prăbuși containerul */
+      }
+
+      /* Toate tab-urile sunt suprapuse */
+      .tab-pane {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+
+        display: flex; /* layout-ul dorit */
+        flex-direction: column;
+
+        @media (min-width: $md) {
+          flex-direction: row;
+        }
+
+        .bg-image {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 80%;
+          padding-top: 150px;
+          margin: 0 auto;
+
+          @media (min-width: $md) {
+            width: 200%;
+            margin: auto;
+          }
+
+          @media (min-width: $xl) {
+            margin: 0;
+            width: 100%;
+            margin-left: -10px;
+            transform: scale(0.9);
+          }
+        }
+
+        p {
+          margin: 0;
+          padding: 10px 20px;
+          font-size: 14px;
+          line-height: 24px;
+          color: #777;
+          font-weight: 300;
+          font-family: "Montserrat";
+          text-align: left;
+        }
+
+        /* Doar tab-ul activ e vizibil */
+        &.show.active {
+          opacity: 1;
+          visibility: visible;
+          position: relative; /* pentru ca textul să fie poziționat normal */
+        }
+      }
+    }
+  }
+}

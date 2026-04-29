@@ -1,0 +1,115 @@
+.social-media {
+  border-bottom: 3px solid #b7b7b7;
+  padding: 15px 0;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $md) {
+      flex-direction: row;
+    }
+
+    .left {
+      width: 100%;
+      text-align: center;
+
+      @media (min-width: $md) {
+        width: 40%;
+        text-align: start;
+      }
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        color: #333333;
+        font-weight: 700;
+        font-family: "Open Sans";
+      }
+
+      p {
+        padding: 5px 0 0 0 !important;
+        font-size: 14px;
+        line-height: 20px;
+        color: #86878b;
+        font-weight: 400;
+        font-family: "Open Sans";
+
+        @media (min-width: $md) {
+          padding: 5px 0 0 0 !important;
+        }
+
+        @media (min-width: $xl) {
+          padding: 5px 56px 0 0 !important;
+        }
+      }
+    }
+
+    .right {
+      width: 100%;
+      align-self: center;
+      padding-top: 30px;
+
+      @media (min-width: $xl) {
+        width: 60%;
+        padding-top: 0;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          padding-left: 30px;
+
+          @media (min-width: $xl) {
+            padding-left: 70px;
+          }
+
+          &:first-of-type {
+            padding-left: 0;
+          }
+
+          a {
+            text-decoration: none;
+            color: #cccccc;
+            font-size: 30px;
+
+            @media (min-width: $xl) {
+              font-size: 50px;
+            }
+
+            &.facebook:hover {
+              color: #1877f2;
+            }
+
+            &.twitter:hover {
+              color: #1da1f2;
+            }
+
+            &.google:hover {
+              color: #db4a39;
+            }
+
+            &.pinterest:hover {
+              color: #e60023;
+            }
+
+            &.instagram:hover {
+              color: #8a3ab9;
+            }
+
+            &.rss:hover {
+              color: #ee802f;
+            }
+          }
+        }
+      }
+    }
+  }
+}

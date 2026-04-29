@@ -1,0 +1,19 @@
+.services {
+  background-color: #17c2a4;
+
+  .content {
+    &__content-body {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 60px;
+
+      @media (min-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: $xl) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}

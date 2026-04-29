@@ -1,0 +1,76 @@
+.skills {
+  background-color: #ffffff;
+
+  .content {
+    &__content-heading {
+      h2 {
+        color: #3c4761;
+
+        &:after {
+          background-color: #dfe8ed;
+        }
+      }
+
+      p {
+        color: #3c4761;
+      }
+    }
+
+    &__content-body {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      @media (min-width: $md) {
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      .circular-progress {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+      }
+
+      .progress-ring {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #e6e6e6;
+        mask: radial-gradient(circle, transparent 65px, black 65px);
+        -webkit-mask: radial-gradient(circle, transparent 65px, black 65px);
+      }
+
+      .percentage {
+        position: relative;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #333;
+        z-index: 1;
+      }
+
+      .progress-70 .progress-ring {
+        background: conic-gradient(#15c7a8 70%, #e6e6e6 0%);
+      }
+
+      .progress-75 .progress-ring {
+        background: conic-gradient(#d74680 75%, #e6e6e6 0%);
+      }
+
+      .progress-85 .progress-ring {
+        background: conic-gradient(#eb7d4b 85%, #e6e6e6 0%);
+      }
+
+      .progress-90 .progress-ring {
+        background: conic-gradient(#30bae7 90%, #e6e6e6 0%);
+      }
+    }
+  }
+}

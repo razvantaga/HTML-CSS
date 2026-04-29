@@ -1,0 +1,66 @@
+.cta {
+  background-image: url("../images/cta-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
+
+  .content {
+    text-align: center;
+    padding: 50px 0;
+
+    @media (min-width: $xl) {
+      padding: 100px 0;
+    }
+
+    h3 {
+      font-size: 30px;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #18cfab;
+      font-weight: 700;
+      font-family: "Montserrat";
+      text-align: center;
+
+      @media (min-width: $md) {
+        font-size: 35px;
+      }
+
+      @media (min-width: $xl) {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 40px;
+      color: #d8d8d8;
+      font-weight: 400;
+      font-family: "Montserrat";
+      text-align: center;
+    }
+
+    a {
+      font-size: 13px;
+      line-height: 32px;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: 700;
+      font-family: "Montserrat";
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      border-top: 5px solid #fff;
+      margin: 0 10px;
+      display: inline-block;
+      text-decoration: none;
+      background-color: #18cfab;
+
+      @media (min-width: $xl) {
+        padding: 10px 20px;
+      }
+    }
+  }
+}

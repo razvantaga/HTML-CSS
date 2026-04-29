@@ -1,0 +1,125 @@
+.purchase {
+  padding: 50px 0;
+  background-color: #233641;
+
+  @media (min-width: $lg) {
+    padding: 100px 0;
+  }
+
+  .content {
+    .heading {
+      position: initial;
+
+      &::after,
+      &::before {
+        display: none;
+      }
+
+      h2 {
+        font-size: 30px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 700;
+        font-family: "Montserrat";
+        text-align: center;
+
+        span {
+          color: #18cfab;
+        }
+
+        @media (min-width: $md) {
+          font-size: 40px;
+        }
+
+        @media (min-width: $xl) {
+          font-size: 51px;
+          line-height: 65px;
+        }
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 50px;
+      flex-direction: column;
+
+      @media (min-width: $md) {
+        flex-direction: row;
+      }
+
+      .bg-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 90%;
+        height: 150px;
+        margin: 20px auto;
+
+        @media (min-width: $md) {
+          width: 63%;
+          height: 250px;
+        }
+
+        @media (min-width: $xl) {
+          width: 75%;
+          padding-top: 40%;
+        }
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @media (min-width: $md) {
+          width: 40%;
+        }
+
+        @media (min-width: $xl) {
+          width: 25%;
+        }
+
+        li {
+          display: flex;
+          &:last-child {
+            margin-top: 50px;
+          }
+
+          img {
+            width: 10%;
+            height: 10%;
+          }
+
+          p {
+            margin: 0px 20px;
+            padding: 0;
+            font-size: 14px;
+            line-height: 35px;
+            color: #f7f7f7;
+            font-weight: 300;
+            font-family: "Montserrat";
+          }
+
+          a {
+            font-size: 13px;
+            line-height: 32px;
+            text-transform: uppercase;
+            color: #ffffff;
+            background-color: #18cfab;
+            font-weight: 700;
+            font-family: "Montserrat";
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            border-top: 5px solid #fff;
+            margin: 0 10px;
+            display: inline-block;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

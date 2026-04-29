@@ -1,0 +1,170 @@
+.header {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 4;
+
+  @media (min-width: $md) {
+    padding: 20px 0;
+  }
+
+  @media (min-width: $xl) {
+    padding: 40px 0;
+  }
+
+  .content {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    a {
+      font-size: 30px;
+      color: #ffffff;
+      font-weight: 700;
+      font-family: "Montserrat";
+      text-decoration: none;
+    }
+  }
+
+  &__toggle {
+    align-self: center;
+
+    @media (min-width: $md) {
+      display: none;
+    }
+
+    &.active {
+      a.openMenu {
+        display: none;
+      }
+
+      a.closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        z-index: 4;
+      }
+    }
+
+    a {
+      display: block;
+      font-size: 18px;
+      color: #fff;
+
+      &.openMenu {
+        display: block;
+        position: relative;
+        z-index: 3;
+      }
+
+      &.closeMenu {
+        display: none;
+      }
+
+      @media (min-width: $md) {
+        display: none;
+      }
+    }
+  }
+
+  &__nav {
+    align-self: center;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: none;
+
+      @media (min-width: $md) {
+        display: flex;
+        flex-direction: row;
+      }
+
+      li {
+        padding-left: 50px;
+
+        &:first-of-type {
+          padding-left: 0;
+        }
+
+        a {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #ffffff;
+          font-weight: 400;
+          font-family: "Montserrat";
+          text-align: center;
+          position: relative;
+          text-decoration: none;
+
+          &:hover {
+            color: #fce38a;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 3px;
+              background-color: #fce38a;
+              left: 0;
+              bottom: -10px;
+            }
+          }
+        }
+      }
+
+      @media (min-width: $md) {
+        flex-direction: row;
+      }
+    }
+
+    &.active {
+      ul {
+        padding: 150px 0 50px 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #e78782;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 70vh;
+        z-index: 2;
+        text-align: center;
+
+        li {
+          padding: 0;
+          margin: 0;
+          padding-bottom: 20px;
+          position: relative;
+          z-index: 4;
+
+          a {
+            position: relative;
+            z-index: 4;
+            &.hover {
+              color: #fce38a;
+
+              &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: #fce38a;
+                left: 0;
+                bottom: -10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

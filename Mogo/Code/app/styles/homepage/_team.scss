@@ -1,0 +1,165 @@
+.team {
+  background-color: #fff;
+
+  .heading {
+    text-align: center;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 30px;
+
+    @media (min-width: $md) {
+      padding-top: 40px;
+    }
+
+    @media (min-width: $xl) {
+      padding-top: 80px;
+    }
+
+    @media (min-width: $md) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    figure {
+      width: 100%;
+      position: relative;
+      margin-top: 35px;
+
+      @media (min-width: $md) {
+        margin-top: 0;
+      }
+
+      .image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        padding-top: 300px;
+
+        @media (min-width: $md) {
+          padding-top: 300px;
+        }
+
+        @media (min-width: $xl) {
+          padding-top: 450px;
+        }
+      }
+
+      .member-info {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -60px;
+        width: 100%;
+
+        h4 {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #333333;
+          font-weight: 400;
+          font-family: "Montserrat";
+          text-align: center;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 24px;
+          color: #999999;
+          font-weight: 300;
+          font-style: italic;
+          font-family: "Roboto";
+          text-align: center;
+        }
+      }
+
+      figcaption {
+        display: none;
+      }
+
+      &:hover {
+        position: relative;
+        background-color: #95e1d3;
+        width: 100%;
+
+        .image {
+          position: absolute;
+          left: -10px;
+          top: -10px;
+        }
+
+        figcaption {
+          display: block;
+          position: relative;
+          z-index: 4;
+          text-align: center;
+          top: -10px;
+          left: -10px;
+          height: 100%;
+          background: linear-gradient(to bottom, #e37e7d, #ebd383);
+          opacity: 0.8;
+          padding-bottom: 140px;
+          padding-top: 105px;
+
+          @media (min-width: $md) {
+            padding-bottom: 0;
+            padding-top: 0;
+          }
+
+          img {
+            padding-top: 25%;
+            opacity: 1;
+          }
+
+          h4 {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-weight: 700;
+            font-family: "Montserrat";
+            text-align: center;
+            opacity: 1;
+          }
+
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            li {
+              background-color: #fbe389;
+              padding: 10px 15px;
+              border-right: 1px solid #f38181;
+
+              &:hover {
+                background-color: #f38181;
+
+                a {
+                  color: #fff;
+                }
+              }
+
+              &:last-of-type {
+                border: none;
+              }
+
+              a {
+                text-decoration: none;
+                color: #f38181;
+                font-size: 24px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

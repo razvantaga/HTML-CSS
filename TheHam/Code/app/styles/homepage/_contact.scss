@@ -1,0 +1,108 @@
+.contact {
+  padding: 50px 0;
+
+  @media (min-width: $md) {
+    padding: 100px 0;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: $lg) {
+      flex-direction: row;
+    }
+
+    .map {
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+    }
+
+    .wrapper {
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 20px;
+
+      @media (min-width: $lg) {
+        width: 90%;
+        padding-top: 0;
+      }
+
+      .heading {
+        text-align: center;
+
+        @media (min-width: $lg) {
+          text-align: start;
+        }
+
+        @media (min-width: $lg) {
+          &::before {
+            left: 17% !important;
+            transform: none !important;
+          }
+
+          &::after {
+            left: 15% !important; // suprascrie valorile globale
+            transform: none !important;
+          }
+        }
+      }
+
+      form {
+        padding-top: 50px;
+
+        .form-wrapper {
+          .form-input {
+            input {
+              width: 100%;
+              border: 1px solid #dee7e5;
+              background-color: #fff;
+              padding: 15px;
+
+              &::placeholder {
+                font-size: 14px;
+                line-height: 19px;
+                color: #90aebd;
+                font-weight: 300;
+                font-family: "Montserrat";
+              }
+            }
+
+            textarea {
+              width: 100%;
+              border: 1px solid #dee7e5;
+              background-color: #fff;
+              padding: 15px;
+              height: 100px;
+
+              &::placeholder {
+                font-size: 14px;
+                line-height: 19px;
+                color: #90aebd;
+                font-weight: 300;
+                font-family: "Montserrat";
+              }
+            }
+          }
+        }
+
+        input[type="submit"] {
+          margin-top: 20px;
+          width: 100%;
+          background-color: #18cfab;
+          border: none;
+          padding: 15px 0;
+          border-bottom: 5px solid #08bf9b;
+          font-size: 14px;
+          line-height: 16px;
+          text-transform: uppercase;
+          color: #ffffff;
+          font-weight: 700;
+          font-family: "Montserrat";
+        }
+      }
+    }
+  }
+}

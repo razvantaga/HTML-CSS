@@ -1,0 +1,96 @@
+.contact {
+  background-color: #3c5499;
+  .content {
+    &__content-heading {
+      h2 {
+        color: #ffffff;
+
+        &::after {
+          background-color: #273a71;
+        }
+      }
+
+      p {
+        color: #ffffff;
+      }
+    }
+
+    &__content-body {
+      form {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        .inputs {
+          display: flex;
+          flex-direction: column;
+
+          @media (min-width: $md) {
+            flex-direction: row;
+            gap: 30px;
+          }
+
+          .form-group {
+            margin: 0;
+            input {
+              width: 100%;
+              height: 50px;
+              background-color: #273a71;
+              border: none;
+              border-radius: 5px;
+              padding: 0px 20px;
+
+              @media (min-width: $xl) {
+                width: 415px;
+              }
+
+              &::placeholder {
+                font-size: 18px;
+                line-height: 18px;
+                color: #ffffff;
+                font-weight: 400;
+                font-family: "Titillium Web", sans-serif;
+              }
+            }
+          }
+        }
+
+        .form-group {
+          textarea {
+            width: 100%;
+            height: 200px;
+            background-color: #273a71;
+            border: none;
+            border-radius: 5px;
+            padding: 20px 20px;
+
+            &::placeholder {
+              font-size: 18px;
+              line-height: 18px;
+              color: #ffffff;
+              font-weight: 400;
+              font-family: "Titillium Web", sans-serif;
+            }
+          }
+        }
+
+        input[type="submit"] {
+          margin-top: 40px;
+          font-size: 18px;
+          line-height: 26px;
+          color: #ffffff;
+          font-weight: 600;
+          font-family: "Titillium Web", sans-serif;
+          background-color: #30bae7;
+          text-transform: uppercase;
+          padding: 15px 50px;
+          border: none;
+          border-radius: 5px;
+          border-bottom: 5px solid #299ec4;
+          align-self: center;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
